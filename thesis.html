@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+
+  /* Every time the window is scrolled ... */
+  $(window).scroll( function(){
+
+    /* Check the location of each desired element */
+    $('#navbar, .part').each( function(i){
+
+      var bottom_of_object = $(this).position().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+      /* If the object is completely visible in the window, fade it it */
+      if( bottom_of_window > bottom_of_object ){
+
+        $(this).animate({'opacity':'1'},700);
+
+      }
+    });
+  });
+});
+</script>
+<script>
+$("window").load(function() {
+  $("body").removeClass("preload");
+});
+</script>
+<script>
+$(document).one('scroll', function() {
+  console.log( $(this).scrollTop() );
+});
+</script>
+<script>
+$(document).on('ready', function() {
+  var winHeight = $(window).height(),
+  docHeight = $(document).height(),
+  progressBar = $('progress'),
+  max, value;
+
+  /* Set the max scrollable area */
+  max = docHeight - winHeight;
+  progressBar.attr('max', max);
+
+  $(document).on('scroll', function(){
+    value = $(window).scrollTop();
+    progressBar.attr('value', value);
+  });
+});
+</script>
+<script>
+$(window).on('resize', function() {
+  winHeight = $(window).height(),
+  docHeight = $(document).height();
+
+  max = docHeight - winHeight;
+  progressBar.attr('max', max);
+
+  value =  $(window).scrollTop();
+  progressBar.attr('value', value);
+});
+</script>
+<script>
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 20
+        }, 1200);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+<title>THE RISE OF THE NEXT HUMAN</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div id="navbar">
+  <div class="sidebar">
+    <a href="#one">●<span>Preface</span></a><br>
+    <a href="#two">●<span>Introduction</span></a><br>
+    <a href="#three">●<span>Chapter 1</span></a><br>
+    <a href="#four">●<span>Chapter 2</span></a><br>
+    <a href="#five">●<span>Chapter 3</span></a><br>
+    <a href="#six">●<span>Chapter 4</span></a><br>
+    <a href="#seven">●<span>Conclusion</span></a><br>
+    <a href="sources.html">●<span>Sources</span></a><br>
+  </div>
+</div>
+
+<!--
+<div id="table_of_content">
+
+
+
+  <div class="contents">
+
+    <a href="#one">Preface</a><br>
+    <a href="#two">Introduction</a> <br>
+    <a href="#three">Chapter 1: Robotics and Artificial Intelligence</a> <br>
+    <a href="#four">Chapter 2: What society perceives</a> <br>
+    <a href="#five">Chapter 3: Dread of robotics and AI</a> <br>
+    <a href="#six">Chapter 4: Designing towards personified Robotics and AI</a> <br>
+    <a href="#seven">Conclusion</a> <br>
+    <a href="#eight">Sources</a>
+
+  </div>
+</div>
+-->
+
+
+<body>
+  <progress value="0"></progress>
+
+<div id="thesis_wrapper">
+
+  <div class="chapter"><a id="one" />The Rise of the Next Human</div>
+  <p>How can we reduce fear of personified Robotics and AI?</p><br>
+  <p>Thesis by Sepus Noordmans, January 2015<br>Royal Academy of Art, The Hague</p>
+
+<div class='part'><h1>PART ONE</h1></div>
+
+<!----------------------- PREFACE ------------------------>
+
+<div class="chapter"><a id="one" />Preface</div>
+<p>The future is approaching us in a fast pace, science and technology has rapidly grown since the Industrial Revolution, and with it the possibility for the world to create new inventions. Technology is my personal interest, I keep being astonished by what we are capable of. It excites me to see how the human mind can explore our universe or solve problems with technology. The topic of robotics and AI is triggered by sci-fi films and the use of AI today. The AI on my smartphone is in many ways doing the same as the AI’s in film – I keep being fascinated when I ask it to set an egg timer, and it does so for me. This task looks easy, but to program this in digital and electronic systems is complicated. I believe in future developments and sometimes feel that I am living in the wrong age to see them become reality. Yes, there is always a vision of a dystopian world in the future, but there are also utopian visions. As long as I believe in utopian situations, I have faith in humanity achieving great discoveries.</p>
+
+<!----------------------- INTRODUCTION ------------------------>
+
+
+<div class="chapter"><a id="two" />Introduction</div>
+<p>Our current society is in the middle of what is called the Digital Age. An age made possible because of the invention of the computer, one of many great inventions by mankind. Ever since this invention, computers have grown into more advanced and more complex systems. We are facing a technological development that is referred to as the rise of the robots. There are many programmed robotics to assist us with whatever needs we may have. For example: assembling cars in factories, bomb defusing in the military or automation in agriculture. Computerized robotics keep becoming smarter and smaller. Now, robotics aren't simply programmed anymore, but have become intelligent machines. They have become so clever that their abilities can make people uncomfortable.<p>
+
+<p>This thesis will discuss about robotics with intelligent ‘minds’. Inventions that are about to blur the border between man and machine; focussing on research in replicating ourselves into mechanical and digital entities. What is the current state of this development and how do we perceive it? It will not be a scientific research, but a combination of how society is influenced by mass media, how philosophers think of the developments, and how graphic design can play a role in it. Throughout the thesis, I try to raise questions regarding whether we need further development in this field of technology, our attempt in making it similar to mankind. Why do we want to take evolution in our own hands by creating a new mechanical species? Why is there a search for human 2.0? There are many scientific papers and articles on this specific topic, there is much knowledge about this development. Mine however, will be looking at aspects of design and personal thoughts. I want to start out this thesis with a quote:</p>
+
+<div class="blockquote">Will robots inherit the earth? Yes, but they will be our children
+—Marvin Minsky, 1995</div>
+
+<div class='part'><h1>PART TWO</h1></div>
+
+
+<!----------------------- CHAPTER ONE ------------------------>
+
+
+
+<div class="chapter"><a id="three" />Chapter 1: Robotics and Artificial Intelligence</div>
+<p>Robotics and artificial intelligence are two separate technologies, although, together they could be the basics of a fully independent robot, in a similar fashion as a human. Robotics would function as muscles and joints of our human body, which makes the machine able to move. Artificial intelligence would be the human brain, or more accurately, the nerve system, here is where the ‘thinking’ happens. This comparison between robotics, AI and humans is the framework for this thesis. I will introduce the world of robotics and artificial intelligence to create a better understanding of the terms. It’s important to understand what this technology consists of and what it could potentially achieve.</p>
+
+
+<h2>1.1 Robotics</h2>
+<p>The difference between robots and robotics is that the latter means the art of developing the robots. Robots are mechanical devices that are capable of independently executing tasks after it has been given a string of computational data. Developed to complete tasks without constant human input. An obvious but clear example of a robot, that doesn’t come from science-fiction, are the mechanical arms that are working in production lines of car factories today. These arms are programmed to execute certain movements and tasks when a yet-to-build-car passes by on the production line. They work with great precision once been given the correct instructions and will never, unlike us humans, grow tired of its job. Leading to a situation where some tasks involving humans have been replaced by robotics. Robots are not only in the industrial sector, but can also be found in our homes. It has not become a standard yet, but the automatic vacuum-cleaner, lawn mowers and self-cleaning toilets are examples of simple robots that find purpose in our daily lives. Small devices such as the vacuum-cleaner will, once instructed, clean while moving inside the space it is currently in. It notices when to stop after ‘feeling’ a wall or another impassible object and continues by making a small turn in another direction. </p>
+
+<div class='thumb'>
+  <img src='img/4_ProductionlineRobots.jpg'/>
+  <p>fig.1 Robotic arms working in a car-production line.</p>
+</div>
+
+<!--
+<div class='thumb'>
+  <img src='img/02_Roomba.jpg'/>
+  <p>fig1. Robots</p>
+</div>
+-->
+
+<p>So, generally speaking robots are being used to replace tasks that we consider mundane, dangerous or exhausting. They can be deployed in areas which are not easily accessible for humans, they could be working deep in the ocean or in outer space. Robotics sound like a positive addition to our lives, but they can also cause a negative change. Robotics are for example blamed for a rising unemployment, specifically the technological unemployment. This discussion has been going on for a long time, and has been called the “Luddite Fallacy” by economics.<sup>01</sup><small class='sidenote'>01. For more information, read “Are we heading for technological unemployment? An argument.” by Danaher, J. IEET [webpage], (2014, August 14)</small> A comment from Marcus Wohlsen in Wired Magazine concludes that technological unemployment is taking away what makes us human:</p>
+
+<div class='thumb'>
+  <img src='img/03_Cyberknife.jpg'/>
+  <p>fig.2 The CyberKnife® Robotic Radiosurgery System</p>
+</div>
+
+
+<div class='blockquote'>Humans will continue to be useful workers because of things like empathy, creativity, judgment, and critical thinking. Traditionally, increased productivity correlates with economic growth and job growth, since human labor has historically driven production. A robot workforce, however, can drive productivity and growth on its own, eliminating jobs in the process. That might mean the whole paradigm of exchanging labor for pay starts to break down. (…) By eliminating the need for people to work, robots would free us up to focus on what really makes us human. The scariest possibility of all is that only then do we figure out what really makes us human is work.<sup>02</sup><small class='sidenote'>02.  Wohlsen, M. “When robots take all the work, what’ll be left for us to do?”, Wired [webpage], (2014, August 8)</small></div>
+
+
+
+<h2>1.2 Artificial Intelligence</h2>
+
+<p>Artificial Intelligence (AI) is the science and engineering of making intelligent machines, especially intelligent computer programs, as said by John McCarthy in 2007.<sup>03</sup><small class='sidenote'>03.  McCarthy, J. “What is Artificial Intelligence?”, Stanford University [webpage], (2007, November 12)</small> The meaning of intelligence here refers to a computational ability to achieve certain goals. It makes computer programs capable of understanding data and –if the AI is designed to it– process this information and responding to it by executing a new task. For example: when asking Siri<sup>04</sup><small class='sidenote'>04. Siri is an intelligent personal assistant installed on Apple’s iOS-compatible devices, such as the iPhone, iPod and iPad. It listens to the users voice and recognizes questions or tasks; such as setting a timer, adding an event to the agenda or writing an e-mail. Siri is a weak AI, meaning that it can process given tasks into data and respond to it by displaying information or executing a given task.</small> a question, it analyses your spoken sounds and transforms these into words, which will be its data. It can then search for an answer on the internet and present information back to you. AI is a very complex research, in order to narrow it down I will focus on two main classifications of artificial intelligence: weak AI and strong AI.</p>
+
+<p>Weak (or narrow) AI means that the machine that is running the AI can appear intelligent, but it only simulates intelligence, it can never be aware of what it is actually doing. In other words, the program is only following a strict set of instructions that it needs to execute. An example of weak AI is spell-checking software. When typing an incorrect word the computer instantaneously runs through the dictionary looking for similar words and compiles a list with potential correct words. After finishing the algorithm it can eventually display a new list where the user selects and corrects the mistake, or the AI does so itself. It seems as if the computer is intelligent because we feel that it understands what we want to write, and that it is assisting us by correcting the fault, but it merely executes a series of tasks very fast to solve a problem.</p>
+
+<p>Strong AI is when a (hypothetical) machine’s intelligence is equal to human’s intelligence. Meaning it will be able to imagine, think, reason, and all the other activities that we do with our brains. It would be possible for the machine to duplicate the full range of human cognitive capabilities. Jack Copeland says: “The reputation of this area of research has been damaged over the years by exaggerated claims of success that have appeared both in the popular media and in the professional journals. At the present time, even an embodied system displaying the overall intelligence of a cockroach is proving elusive, let alone a system rivalling a human being.”<sup>05</sup><small class='sidenote'>05.Copeland, B. J. “What is Artificial Intelligence?”, Alan Turing [webpage], (2000, May)</small> Strong AI is as of now non-existent, but researchers and engineers are developing this technology, and it might become a reality in a not-too-distant future. Ray Kurzweil believes that in 2029, computers will be able to do all the things that we humans are able to do, but better.<sup>06</sup><small class='sidenote'>06. Khomami, N. “2029: the year when robots will have the power to outsmart their makers.”, The Guardian [webpage], (2014, February 22)</small> It would be a new step in human evolution.</p>
+
+<div class='thumb'>
+  <img src='img/01_CarthyCopelandDvorsky.png'/>
+  <p>fig.3 John McCarthy, Jack Copeland and George Dvorsky</p>
+</div>
+
+<p>There are many systems that have a weak (or narrow) AI, being limited to a set of tasks. These are tasks executed outside human control, in languages and speed that most of us can’t comprehend. There are many fears that come with AI, many people feel uncomfortable about the idea of software controlling aspects in our daily lives. Weak AI could be autocorrect or speech recognition, or bigger, like the complex algorithm that controls stock markets, algorithms such as these caused the flash-crash in May 2010. In 2013 George Dvorsky said: “Narrow AI could knock out our electric grid, damage nuclear power plants, cause a global-scale economic collapse, misdirect autonomous vehicles and robots (…) Weak, narrow systems are extremely powerful, but they’re also extremely stupid; they’re completely lacking in common sense. Given enough autonomy and responsibility, a failed answer or a wrong decision could be catastrophic.”<sup>07</sup><small class='sidenote'>07. Dvorsky, G. “How much longer before our first AI catastrophe?”, io9 [webpage], (2013, February 1)</small> Even though the description of weak or narrow AI sounds harmless, it can do great harm to all of our digital systems because it executes any given task with incredible speed. Eventually, if there was to be a catastrophic event –like the flash-crash– created by an AI, we might be to late to prevent it from happening.</p>
+
+<p>Strong AI is often debated, there are endless stories and films in our popular culture about a type of AI represented as mans true friend, a savior of mankind or the end of mankind. In contrast to weak AI, strong AI is not limited to tasks. The fear that is connected to strong AI is its ability to potentially develop itself, and improve, the same way that humans improve their abilities over time. The reason that this debate of fear is ongoing, is that strong AI that can learn and improve is likely to surpass its human creators.</p>
+
+<p>Stephen Hawking, a famous physicist, mentioned in a column in The Independent: “Success in creating AI would be the biggest event in human history. Unfortunately, it might also be the last.”<sup>08</sup><small class='sidenote'>08. Hawking, S. Russell, S. Tegmark, M. Wilczek, F. “Stephen Hawking: Transcendence looks at the implications of artificial intelligence - but are we taking AI seriously enough?”, The Independent [webpage], (2014, May 1)</small>, he recently expressed the same concern on BBC: “The development of full artificial intelligence could spell the end of the human race.”<sup>09</sup><small class='sidenote'>09. Cellan-Jones, R. “Stephen Hawking warns artificial intelligence could end mankind.”, BBC [webpage], (2014, December 2)</small> He is not the only person warning society about AI. Elon Musk, founder of SpaceX<sup>10</sup><small class='sidenote'>10. SpaceX is an American space transport company founded in 2002 by Elon Musk. Its goal is to reduce space transportation costs, so that in the future they will be able to transport humans into space and colonize the planet Mars.</small>, shares the same thoughts. They both believe that if we do not limit AI, specifically strong AI, the danger increases due to intelligence superiority. What will happen when a hypothetical combination of robotics with strong AI will become reality?</p>
+
+
+
+<!----------------------- CHAPTER TWO ------------------------>
+
+
+
+
+<div class="chapter"><a id="four" />Chapter 2: What society perceives</div>
+<p>The view of society on the topic of robotics and AI is influenced by the films we see in popular culture. Many sci-fi storylines depict a common dystopian view, showing how powerful computers and robotics can be. The <i>Terminator</i> (1984/2015) series envisions a dystopian future, where an AI called Skynet attempts to exterminate the human race. <i>I, Robot</i> (2004) is another good example that initially shows a utopian future where robots are peaceful personal assistants for the future civilization, but turns dystopian when a robot with strong AI is accused of murdering a human, being able to break one of the three laws of Asimov.<sup>11</sup><small class='sidenote'>11. The Three Laws of Robotics, a set of rules by sci-fi author Isaac Asimov. He uses these set of rules in his stories as safety measures for robotic characters, a fixed framework so humans can’t be harmed. The three rules are: 1. A robot may not injure a human being or, through inaction, allow a human being to come to harm. 2. A robot must obey the orders given to it by human beings, except where such orders would conflict with the First Law. 3. A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</small> If this robot is capable of breaking a programmed law and harming humanity, all the other robots can potentially do the same. This vision where robotics and AI overrule mankind is common when discussing human fate since this invention. Does this mean that by default, we accept that these robots are already better than us, the creators? This chapter will look at how robotics are designed and personified in popular media. By comparing carefully selected intelligent robotic film characters, looking at how their appearances and their human-like behavior is designed, I aim to prove that the development and design of robotics in reality can learn from the aesthetic approach of sci-fi films.</p>
+
+<div class='thumb'>
+  <img src='img/04_iRobot.jpg'/>
+  <p>fig.4 Protagonist Sonny from the film iRobot</p>
+</div>
+
+
+
+  <h2>2.1 In popular culture</h2>
+
+<p>Stanley Kubrick produced and directed what I consider to be my favorite, and one of the most important sci-fi films ever made. <i>2001: A Space Odyssey</i> (1968) is where an AI –without a robotic form– is the antagonist in the story. It is called Hal-9000 (Heuristically programmed ALgorithmic computer). An intelligent computer that is in control of the Discovery One, an interplanetary spacecraft with an astronaut crew aboard which Hal is caretaker of. Because of its intellectual behavior, we identify Hal in the film as a being, even though he is not a physical being per se. Hal is controlling the entirety of the ship from every location, he is an ephemeral entity, slightly comparable to todays network system called the <i>cloud</i>.<sup>12</sup><small class='sidenote'>12. The Cloud is network system where several other computers, or any digital device has access to a centralized data storage. The similarity with Hal is that also this computer can access the entirety of the ship, controlling all the digital systems of it.</small> Even though there is no physical machine with absolutely no human anatomy, we as viewers (possibly) still recognize him –or better said, the machine– as one of us. During the film our understanding of Hal changes from an "it" to become a "he". We see him as a person. The AI behaves with a similar human mind and has a ‘male gender’ because of his (monotonous) voice. It is a sentient computer, meaning that it is able to understand human emotions and relate accordingly. Next to that he is conscious and capable of making decisions, which makes Hal an example of a strong AI (see chapter 1). Hal thinks, talks and acts like a human would do. What reminds us that Hal is a machine is that he has no human-like face. His ‘face’ is a rectangular panel mounted with an iconic red ‘eye’ and some additional features. There is no point of reference for a human to understand his emotion by means of facial expression. A perceptive ability and a go-to for humans to understand the other persons thoughts. It is a universal and non-verbal language for our social species. “It serves as a window to display one's own motivational state. This makes one's behavior more predictable and understandable to others and improves communication. The face can be used to supplement verbal communication. A quick facial display can reveal the speaker's attitude about the information being conveyed.”<sup>13</sup><small class='sidenote'>13. As described on Massachusetts Institute of Technology website, MIT [webpage]</small></p>
+
+<div class='thumb'>
+  <img src='img/05_Hal.jpg'/>
+  <p>fig.5 Hal-9000 from 2001: A Space Odyssey</p>
+</div>
+<div class='thumb'>
+  <img src='img/05_Hal2.jpg'/>
+  <p>fig.6 Deactivation scene of Hal-9000</p>
+</div>
+
+<p>At the point when Hal says that he can understand and feel an emotion, we suddenly identify him as non-human. When Hal is being deactivated, he recommends Dave to sit down and reconsider the situation, after no response Hal continues with acknowledging his own mistakes and tries to convince Dave to stop the deactivation.</p>
+
+<div class='blockquote'>
+  HAL: Look Dave, I can see you're really upset about this. I honestly think you ought to sit down calmly, take a stress pill, and think things over.<br><br>
+  HAL: I know I've made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal. I've still got the greatest enthusiasm and confidence in the mission. And I want to help you.<br><br>
+  [HAL's shutdown]<br><br>
+  HAL: I'm afraid. I'm afraid, Dave. Dave, my mind is going. I can feel it. I can feel it. My mind is going. There is no question about it. I can feel it. I can feel it. I can feel it. I'm afraid…
+</div>
+
+
+<p>Hal is understanding the concept of fear. But the viewer can’t hear any differences in his monotone voice, nor perceive any expressions where it proves that Hal is truly experiencing fear. Eventually, these aesthetic limitations created confusion which made Hal unidentifiable as a being, leaving him drift the realm between man and machine.</p>
+
+<div class='thumb'>
+  <img src='img/06_2001Moon.png'/>
+  <p>fig.7 Promotional posters of both 2001:A Space Odyssey (1968) and Moon (2009)</p>
+</div>
+
+<p>After the release of 2001: A Space Odyssey, the character Hal caused an increase in societal anxiety towards autonomous computers as it showed both risks and power of AI technology. In contrast to this film, director Duncan Jones released <i>Moon</i> in 2009. A sci-fi film about moon-based employee Sam Bell, working solely on an automated mining operation. Sam is accompanied by Gerty, a computer that controls the base and acts as caretaker of Sam during his three-year labor. Just like Hal, Gerty is a strong AI, but with additional robotic features. Gerty has his own physical ‘body’, a big chassis fixed to a rail system, which allows him to move towards and inside certain spaces in the base. Gerty’s physical presence makes Sam feel less alone, he can find the machine and meet him ‘in person’. By granting Gerty this non-ephemeral form, viewers of the film perceive him closer to be a being. “Robots that closely resemble a human being deal with and affect people much differently than a less anthropomorphic one. Physical appearance does not limit a robot's interaction with humans though it greatly enhances it.”<sup>14</sup><small class='sidenote'>14. As described on the University of Michigan website, UMICH [webpage]</small> It is a feature that improves the relationship between Sam and Gerty, and also between Gerty and the audience. Gerty seems less frightening than Hal because he has an actual face. Not a human face, or any attempt to make a humanoid version of it, but a simplified representation of a face. Gerty has an eye, a white ‘blinking’ camera that is more ‘alive’ than Hal’s red and fear-inducing camera. But this ‘eye’ is not what Sam looks at when interacting with Gerty, he has a feature that makes him more approachable. On the front of his chassis is a small screen that displays emoticons, the same we use in text-messaging. Granting Gerty this low-form of communication through emotions, makes Sam able to relate better to Gerty because he can express ‘feelings’ such as smiling, frowning, crying, and being confused. This greatly enhances the bond between the two characters.</p>
+
+<div class='thumb'>
+  <img src='img/07_Gerty.jpg'/>
+  <p>fig.8 Gerty in conversation with Sam Bell</p>
+</div>
+
+
+<div class='blockquote'>
+  Gerty: Two weeks to go Sam<br>
+  Sam: Two weeks to go buddy!
+</div>
+
+<p>Throughout the film, Sam recognizes Gerty not only as his colleague but also as a friend. The relationship between man and machine is an important storyline in the film, even though it is not the primary. A great part of the film is about how Sam interacts with Gerty, and how a robot can befriend a human. Gerty's friendly appearance and behavior caused a positive shift for robotics and AI, improving the negative impression after <i>2001: A Space Odyssey</i>. Gerty’s screen with emoticons is similar to the one mounted on Baxter (introduced in 2012). Baxter is not a movie character, he is part of the current robotics that I will discuss later in this chapter.</p>
+
+<div class='thumb'>
+  <img src='img/08_StarWars.jpg'/>
+  <p>fig.9 C-3PO together with R2-D2</p>
+</div>
+
+<p>The iconic robotic duo from the <i>Star Wars</i> films (1977-2005) C-3PO and R2-D2 are possibly the funniest and most kind representations of robotics and AI in popular culture. A shiny golden robot and his blue/white rolling companion are important characters in the science-fiction genre. C-3PO’s design is defined as humanoid, a mechanical construction that strongly resembles a human being. C-3PO does so in many ways: human appearance and anatomy, predictable behavior and speaking the same language. Equipped with with human features: a pair of eyes with eyebrows, a nose and a mouth. R2-D2 however, isn’t designed as a humanoid but a robot in core. His looks are far from being human, but the sounds that R2-D2 produces have a slight human hint. The following snippet is from an interview with sound-designer Ben Burtt, in a conversation about his sound-design for R2-D2:</p>
+
+
+
+<div class='blockquote'>
+Yet it was a machine, it didn’t have a face with a smile or a mouth, eyes or ears. And it couldn’t speak English and it couldn’t even mouth words. At least Chewbacca could make kind of animal sounds, which you could attribute a personality to. The initial experiments coming up with R2’s voice were all directed to make a machine-type of language that would come out of a computer, out of a robot. And all of the voices were very interesting, but they all seem to lack a certain human quality, they seem to machinelike. And R2 wasn’t just a machine but also a lovable assistant robot.<sup>15</sup><small class='sidenote'>15. Star Wars. Ben Burtt Interview: R2-D2. [video], circa. 1980)</small></div>
+
+<p>Ben Burtt later mentions that he designed sounds similar to the sounds that a little infant would make when learning to talk. “So the idea came up to combine this sort of human sound, with electronic sounds. That way we might be able to have the character of a machine, but get the personality and emotion of a living organism.”<sup>16</sup><small class='sidenote'>16. Star Wars. Ben Burtt Interview: R2-D2. [video], circa. 1980)</small> R2-D2 remains a machine, adding morphed baby-like sounds made the viewers like the character more. Another character that has a similar approach is from the animated film <i>Wall-E</i> (2008). The design of Wall-E made him a cute machine, it has shiny glassy eyes and a primitive vocabulary that reminds us of a baby. Both Wall-E and R2-D2 completely evade being a humanoid, but does have several human-like aspects implemented.</p>
+
+
+<h2>2.2 The Uncanny Valley</h2>
+<p>The viewers adored R2-D2 more than its humanoid counterpart C-3PO because R2-D2 is evading what is called the Uncanny Valley.<sup>17</sup><small class='sidenote'>17. Thompson, C. “Why do we love R2-D2 and not C-3PO?”, Smithsonian Magazine [webpage], (2014, May)</small> This mysterious term was coined in the 1970’s by Japanese roboticist Masahiro Mori. He noticed that, the more human his robots became in behavior and appearance, the more positive reactions. However, when robots resembles humans closely but not enough to be convincing, people found them to be visually revolting. The Uncanny Valley is the gap between being almost human and completely human. Forty-four years after its introduction, both robot designers and film makers still struggle with the Uncanny Valley. Films have received criticism when their character appeared too human, but failed at mimicking it.<sup>18</sup><small class='sidenote'>18. All Things Concerned. “Hollywood eyes Uncanny Valley in animation.”, NPR News [radio], (2010, March 5)</small> We detect slight imperfections because our brain has expectations of how another human should behave, it becomes strange when it doesn’t. Karl MacDorman says in 2005: “When a humanlike robot elicits an eerie sensation it is because the robot is acting as a reminder of mortality.”<sup>19</sup><small class='sidenote'>19. MacDorman K.F. Androids as an Experiment Apparatus: Why Is There an Uncanny Valley and Can We Exploit It? (2005) pg.2.</small> When an extreme human-like robot does not move at all, we quickly perceive it as a dead being. These quick perceptions stir up a fear and leave us uncomfortable watching the subjects attempt – but fail to mimic humans. The Uncanny Valley is a hypothesis, but proves useful for robot designers and film makers. There are scientists that doubt the existence of the valley. Ayse Saygin, a cognitive scientist at the University of California says: “We still don't understand why it occurs or whether you can get used to it, and people don't necessarily agree it exists.”<sup>20</sup><small class='sidenote'>20. Hsu, J. “Scientists still aren't sure why the "uncanny valley" freaks you the hell out”, io9 [webpage], (2012, March 5)</small> The Uncanny Valley is a mental phenomenon that scientists aren’t able to explain. Except we as viewers become uncomfortable when noticing a subject that is deep down in this valley. The following images are several examples of uncanny robots.</p>
+
+<div class='thumb'>
+  <img src='img/09_HRP4C.jpg'/>
+  <p>fig.10 HRP-4C, a humanoid robot that is within the Uncanny Valley</p>
+</div>
+<div class='thumb'>
+  <img src='img/10_Afetto.jpg'/>
+  <p>fig.11 Another humanoid robot, named Afetto</p>
+</div>
+
+
+<h2>2.3 In reality</h2>
+<p>Right now, the development of robotics and (weak) AI in reality is flourishing. Many robots are being developed, either in concept or final stages. One of the latter is Baxter, designed by Rethink Robotics and already working in several companies. As mentioned in chapter 1, many of the current robotics are deployed in industrial environments. Baxter does not do heavy-duty work, but replaces other mundane tasks like packaging. On the website of Rethink Robotics you get welcomed with: “For decades, production robots have been separated from people by protective cages (…) Rethink Robotics is changing that paradigm.”<sup>21</sup><small class='sidenote'>21. Rethink Robotics [website]</small> With Baxter they want to take a step closer to people. One way they attempt to do so is by ‘teaching’ Baxter the movements you want him to perform. By physically guiding him –positioning his arms– and implement tasks for him to execute, he will then repeat the taught orders and will be fully operational.</p>
+
+<div class='thumb'>
+  <img src='img/11_Baxter.jpg'/>
+  <p>fig.12 Baxter at work</p>
+</div>
+<div class='thumb'>
+  <img src='img/12_Jibo.jpg'/>
+  <p>fig.13 White and black version of Jibo</p>
+</div>
+
+<p>Baxter made a step closer to our homes, but Jibo is already on our doorstep. Jibo started out as crowdfunding project<sup>22</sup><small class='sidenote'>22. Jibo: world’s first family robot, Indiegogo [webpage], (2014, July 16)</small>. The project reached its $100.000 goal in only four hours, closing with an approximate of $2.2 million dollars in investments. Jibo is an intelligent personal assistant, slightly comparable to the weak AI on our smartphones. It can notify you when you have new emails, or remind you of an appointment. But where Jibo goes further, is that he can educate children through apps, and has a 360 degrees rotational body that enhances interaction between man and machine. This gets emphasized in the introduction clip where the narrator explicitly calls Jibo a ‘he’.<sup>23</sup><small class='sidenote'>23. MyJibo [website]</small> Jibo is making a first attempt to be a robotic friend in our homes, living with the family. Next to the massive amount of pledges by enthusiasts, there are many people that fear the coming of Jibo. Reading the comments underneath the introduction clip on YouTube, it is clear that people still fear a dystopian future where robots control or destroy mankind.<sup>24</sup><small class=sidenote >24. MyJibo. Jibo: The World’s First Family Robot. [video], (2014, July 16)</small> This is a rather stereotypical view on technology that has greatly been influenced by popular culture, such as those I’ve mentioned before:</p>
+
+<div class='blockquote'>
+  “I'm not sure if Jibo is really neat, or really disturbing. Is there an uncanny valley for household devices?﻿” <br>-Kee Hinckley
+<br><br>
+  “I had no idea AI was so advanced and consumer ready... or is it possible that they have over-sold and over-stated the reality of this thing? Is it really as fluent as it is being portrayed, here? Really? Well, it's pretty neat and if it is actually as they are selling it, here, it's even a little bit scary.﻿” <br>-Richard Lucas
+<br><br>
+  “.....this is the beginning of the end.﻿” <br>-George Baum
+</div>
+
+<p>Nevertheless, it has received many positive comments since its introduction from technology websites. On Mashable they say: “Jibo isn't an appliance, it’s a companion, one that can interact and react with its human owners in ways that delight instead of disturb. Jibo supports the human experience, but does not try to be human.”<sup>25</sup><small class='sidenote'>25. Ulanhoff, L. “Jibo wants to be the world’s first family robot.”, Mashable [webpage], (2014, July 16)</small> The team behind Jibo attempts to shift towards a more positive view upon robotic technology by learning how humans can interact with robots. And what Jibo is doing good in terms of physical design, is not approaching the Uncanny Valley.</p>
+
+<div class='blockquote'>
+  “…and automatically swiveling to pay attention to someone else speaking nearby it. It moves, in other words, as one might expect a living thing to. Breazeal calls this “attuned reciprocity” It’s the idea of not only paying attention to visual cues, but responding in a reciprocal or mutual way. It’s something humans do all the time.”<sup>26</sup><small class='sidenote'>26. Ulanhoff, L. “Jibo wants to be the world’s first family robot.”, Mashable [webpage], (2014, July 16)</small>
+<br><br>
+  “More importantly, Jibo skirts way, way around the uncanny valley — there’s little in it that could be confused for a human. “It’s a robot, so let’s celebrate the fact it’s a robot,” said Breazeal as she explained the design decisions behind Jibo. Yet it can act in human ways that are compelling.”<sup>27</sup><small class='sidenote'>27. Ulanhoff, L. “Jibo wants to be the world’s first family robot.”, Mashable [webpage], (2014, July 16)</small>
+</div>
+
+<p>Jibo has a similar feature to those of Baxter and Gerty. All three of them are using a screen to display facial expressions and emotions. There is a pattern with this feature, it is being used on several different kinds of robotics. What I can read from this is that visualizing facial expressions is an important aspect to make us feel closer to robots. It will –through emotions– enhance communication and understanding between man and machine.</p>
+
+
+
+<h2>2.4 Other AI in popular culture</h2>
+<br>
+<div class='thumb'>
+  <img src='img/13_Cortana.jpg'/>
+  <p>fig.14 Cortana, the AI in the Halo videogame series</p>
+</div>
+<div class='thumb'>
+  <img src='img/14_Metropolis.jpg'/>
+  <p>fig.15 The Maschinenmensch, the humanoid in the film Metropolis (1927)</p>
+</div>
+<div class='thumb'>
+  <img src='img/15_EDI.jpg'/>
+  <p>fig.16 EDI, an AI from the videogame Mass Effect 3 </p>
+</div>
+<p>Science and engineering will continue to develop robotics and AI until they are completely personified – entirely comparable to humans. As depicted in popular culture, it is a common way to think about this topic as a threat to mankind, maybe because they look similar to us? It seems that the design of robotics in popular culture take human elements and ‘robotize’ it. What blurs the border between man and machine in the case of Hal is that he seems to understand human emotions, but completely lacks emotional tones in his voice. Gerty however, has a mechanical body and mimic facial expressions to appear more human. We can learn from these characters how to personify robotics, how to feel comfortable with them. Mori’s Uncanny Valley is in my opinion real. Most of us get uncomfortable when watching an animatronic –which are those eerie humanlike robots in theme parks– or any other entity that fails at mimicking a human. I think that there is no need to create robotics to look and feel like humans, but we can implement certain human aspects, to appreciate robots more and make them personified. We need to evade the valley for the development of robotics and AI and it might mean not to make an upgraded version of humans at all. Why do we try to create robots like us? Why are we developing a technology that is replicating everything that makes us human? A practical reason why we share the same anatomy is that robots are designed to make it work together with us, in our homes or at work. We have shaped the world around us and the robots need to function in our world. All of our products are made for our anatomy, our capabilities and our limitations.</p>
+
+
+
+
+
+
+
+
+<!----------------------- CHAPTER THREE ------------------------>
+
+
+
+
+<div class="chapter"><a id="five" />Chapter 3: Dread of Robotics and AI</div>
+
+<p>The fear of what is in the future, or an expected fear, is defined as dread. An emotion that modern society feels about robotics and AI. In the previous chapter I have explained about how aesthetics can frighten us, but how can we be afraid of a technology that doesn’t yet exist? Such as the invention of superintelligent machines (strong AI)? Philosopher Nick Bostrom thinks that the coming of superintelligence, is another step in the evolution of technology. Our society is constantly inventing products to gain profit for companies, make human lives easier or even save human lives. Bostrom somehow pictures a utopian situation where computers can solve problems that are troubling our society:</p>
+
+<div class='blockquote'>
+It is hard to think of any problem that a superintelligence could not either solve or at least help us solve. Disease, poverty, environmental destruction, unnecessary suffering of all kinds: these are things that a superintelligence equipped with advanced nanotechnology would be capable of eliminating. Additionally, a superintelligence could give us indefinite lifespan, either by stopping and reversing the aging process through the use of nanomedicine, or by offering us the option to upload ourselves. A superintelligence could also create opportunities for us to vastly increase our own intellectual and emotional capabilities, and it could assist us in creating a highly appealing experiential world in which we could live lives devoted to in joyful game-playing, relating to each other, experiencing, personal growth, and to living closer to our ideals.<sup>28</sup><small class='sidenote'>28. Bostrom, N. Cognitive, Emotive and Ethical Aspects of Decision Making in Humans and in Artificial Intelligence (revised), (Int. Institute of Advanced Studies in Systems Research and Cybernetics, 2003), pp. 12-17</small>
+</div>
+
+<p>There are people who dread this development, like Stephen Hawking and Elon Musk.<sup>29</sup><small class='sidenote'>29. Luckerson, V. “5 Very smart people who think Artificial Intelligence could bring the apocalypse.”, Time [webpage], (2014, December 2)</small> But what is it that frightens us? Paul Virilio, a world-renowned philosopher focusses on the development of technology in relation to power and speed. In his book The Administration of Fear, he writes about how the Blitzkrieg of the Second World War was frightening to the world.<sup>30</sup><small class='sidenote'>30. Virilio, P. The Administration of Fear. (Semiotext(e), 2012), pp.14-20</small> He says that it was due to incredible coordination combined with an overwhelming speed. Virilio continued to a contemporary situation –such as society today– where synchronization and speed of the internet causes an instant global fear. Horrible events and warnings ripple over the entire globe through wires and screens. Both are related in terms of speed. The dread for robotics and AI would be its ability that it can almost instantaneously outsmart us. The previous example of the stock market and its flash-crash in 2010 gives us a sense of the fast pace in which advanced computers can act. </p>
+
+<div class='blockquote'>
+I set the date for the Singularity—representing a profound and disruptive transformation in human capability— as 2045. The nonbiological intelligence created in that year will be one billion times more powerful than all human intelligence today.<sup>31</sup><small class='sidenote'>31. Kurzweil, R. The Singularity Is Near: When Humans Transcend Biology. (Penguin Books, 2006), pg. 118</small></br>
+- Ray Kurzweil
+</div>
+
+<p>What we do know is that strong AI will be developed to replicate and exceed human capabilities. It will become faster and smarter than a human brain, in the end, this technology strives to go beyond our human limitations. Ray Kurzweil mentions in his book called <i>The Singularity is Near</i>: that robotics and AI will add great value to each other, but that having a physical embodiment is not his central concern. His concern is that a multitude of AI systems could combine and improve themselves with incredible speed, as communication between digital systems is faster than human communication. Eventually it will surpass human intelligence before we even know it. When such a system can improve itself so rapidly, it is being called a technological singularity, an information bomb, a runaway AI. Ray Kurzweil predicts that this event will take place around 2045.<sup>32</sup><small class='sidenote'>32. Cadwalladr, C. “Are the robots about to rise? Google's new director of engineering thinks so.” The Guardian [webpage], (2014, February 22)</small> The singularity will have consequences for our society and as George Dvorsky describes: “Human control will forever be relegated to the sidelines, in whatever form that might take.”<sup>33</sup><small class='sidenote'>33. Dvorsky, G. “How much longer before our first AI catastrophe?”, io9 [webpage], (2013, February 1)</small></p>
+
+<p>There is a smart statement in an article by Derek Wadsworth about ethics of robotics and AI: “We have designed humanoids to model and extend aspects of ourselves and, if we fear them, it is because we fear ourselves.”<sup>34</sup><small class='sidenote'>34. Wadsworth, D. “Ethical Considerations”, Idaho National Library [website]</small> Developing this technology does require to mirror mankind, and taking that as foundation. But by replicating our own species (in a mechanical, upgraded form), we would in turn create a competitor that is a better version than ourselves. Not necessarily understood as war between man and machine –as commonly depicted in film– but in a sense that it would question our own role in society.</p>
+
+<p>To have none, or reduce the dread for robotics and AI, we need to reflect both on negative, but also on the positive consequences. Juha van ’t Zelfde suggest that: “Putting a searchlight on dread may lead to the possibility of an early detection and eventual prevention of catastrophe. The dreadful is not only a state of paralysis – it is also a constructive, moral force, that helps us decide what is good in order to preserve it and prevent bad things from happening.”<sup>35</sup><small class='sidenote'>35. van ’t Zelfde, J(ed.) Dread The Dizziness of Freedom. (Valiz, 2013), pg.12</small> If we lose control of this technology or are unable to foresee the singularity in 2045, the dreadful story of Hal-9000 could be society’s new reality. It is of great importance to look at all the potentials of this technology, whether researchers, engineers and philosophers describe it good or bad. Many philosophers and films have pictured a doomsday scenario, but maybe that isn’t what we need to focus on. Developing this technology –and it will be developed– is in my opinion not necessarily a negative development, but it will change society and our lives dramatically. And as collective mankind we need to re-evaluate in what kind of world we want to live in and design it accordingly. Do we need to develop a machine that can potentially put mankind aside?</p>
+
+
+
+
+
+
+
+
+
+
+
+<!----------------------- CHAPTER FOUR ------------------------>
+<div class="chapter"><a id="six" />Chapter 4: Designing towards personified Robotics and AI</div>
+<p>Our current, younger generation is growing up with digital systems as toys. Asking a computer to help them remind an event is probably very normal to them. But to get technology closer to the rest of the people, it requires to be humanized. Meaning that complex technologies need to adapt to human needs, not developing a technology and making humans adapt to it afterwards. When we’ve achieve humanized robotics and AI, we can then take the next step to personify it. Giving robotics and AI their own characteristics, can make them meddle within society, without fearing them.</p>
+
+
+<div class='blockquote'>
+One of the things I've always found is that you've got to start with the customer experience and work backwards to the technology. You can't start with the technology and try to figure out where you're going to try to sell it. I've made this mistake probably more than anybody in this room and I've got the scar tissue to prove it, and I know that it's the case. As we have tried to come up with a strategy and a vision for Apple, it started with ‘What incredible benefits can we give to the customer? Where can we take the customer?' [It's] not starting with; let’s sit down with the engineers and figure out what awesome technology we have and how are we going to market that?<sup>36</sup><small class='sidenote'>36. Steve Jobs. Apple’s Worldwide Developer Conference, [video], (1977, May 16)</small>
+</div>
+
+<p>This quote was from Steve Jobs, the man behind Apple’s success, who has achieved humanized technology at Apple. He succeeded in making each of its products more simple to use, by making the users not aware of the complex technology, but simplifying it to make them understand the product easily. To think of personified robotics and AI we need to start humanizing this technology first. How can robotics and AI technology do good for individuals, for well-being instead of profit and economic reasons? What will eventually be the goal of a robot with strong AI? Nations or maybe even individuals with power and wealth are more likely to acquire or support this development. Eventually, they might give input and decide what purpose they want to give to these machines. To give an example, wealthy and technologically developed nations such as the United States is already fighting her wars alongside with partial independent machines. Over any theatre of war, drones are filling the skies – a great advantage for a military force down on the ground. These highly accurate machines can make battles turn to victories, or even prevent them from happening. It is power and wealth that grants access to these high-end machines and its purpose will reflect the one who possesses the technology. Could a criminal organization design a robot with criminal intentions? These possibilities make the technology a potential threat, and that is why ethics of robots should be discussed globally, for it to function peacefully in our world. Nevertheless, Nick Bostrom pictures the utopian situation, where superintelligence of an AI can solve problems such as disease or environmental destruction. On the other side we have Stephen Hawking who does not picture a utopia, believing that it could possibly be the last invention of mankind.</p>
+
+<p>To me, an interesting angle is how graphic design can humanize robotics and AI to reduce dread from society. Contemporary movements in graphic design exploit current technologies, such as the computer, resulting in comprehensive and technical design. In the design world today, humanized design –for example– can be about UI (User Interface) design, it basically means how a user navigates through a program on a computer or smartphone. Especially since the Digital Age, we work many hours on computers or smartphones and it will only increase. We are constantly in contact with digital platforms and services around us and this daily presence requires to make it visually familiar. Yet, we do not need to see the complex language behind such an application. Navigating in an application requires a design that is easy, understandable and up for instant use.</p>
+
+<p>In the <i>2001: A Space Odyssey</i> film, you see a control panel filled with several typographic designs on screens. Back in 1968, this type of graphic design was supposed to envision the future, through its graphic design. The screens display a monotone color scheme and an extended sans-serif typeface (Eurostile). Today we define this aesthetic in UI design as flat-design, which has become a very common style of designing user interfaces as it is a quick, responsive and a clear way of designing. Simplifying and removing some graphical elements makes technology appear more comprehensible for the user. Another example of humanized design in film is in Spike Jonze’s <i>Her</i> (2013). Where design of certain elements also fit within the flat-design style. In the boot-up sequence of OS1 –introducing the AI Samantha– there is a computer screen with a fluid and friendly looking UI design. There is only a single animated logo on top of a monotone color, and any other elements of UI has been removed. This scene was short but it managed to show how natural and simplified we should perceive complex technology. I think this is a great approach in personifying robotics and AI. We do not need to feel how much more superior a robot is by looking at it. If we don’t expel technical elements, a potential gap could rise between human and machine and there will be difficulties in accepting them into our society, as science-fiction pictures it to be. Take for example the PETMAN prototype, introduced by DARPA in 2011. Its mechanical appearance and spastic movement is already enough to frighten society.<sup>37</sup><small class='sidenote'>37. DARPA (Defense Advanced Research Projects Agency) is an agency of the United States Department of Defense. It is developing new technologies that will be used by the American military. Recently they have been showing demonstrations of their developments in robotics that would be deployed in the military. Such as the humanoid – PETMAN prototype, or the LS3, a mechanized packhorse that can support squads of soldiers in the battlefield.</small></p>
+
+<div class='thumb'>
+  <img src='img/16_PETMAN.png'/>
+  <p>fig.17 The PETMAN prototype, a robotic soldier</p>
+</div>
+
+<p>Futuristic graphic design refers to older styles when it needs to envision a futuristic situation. In the film Her, the program OS1 is designed simple and calming, posters and other forms of media promoting the film, have been designed with a similar aesthetic. It contains an old approach towards futuristic design. The main poster of the film is typeset with Helvetica from Max Miedinger and with it, resurrects the International Typographic Style that dates back to 1920’s. However, this style was considered to be de-humanizing graphic design. Simplistic and neutral aesthetics that were constructively designed is opposite of what we call human. But it fits perfectly for the complex technology of robotics and AI. It seems that aspects of these aesthetics are commonly used to envision the future, yet it is greatly opposite of humanized design, let alone personified.</p>
+
+<div class='thumb'>
+  <img src='img/18_Her2.jpg'/>
+  <p>fig.18 Installation of OS1 (Samantha) in the film Her</p>
+</div>
+
+<div class='thumb'>
+  <img src='img/19_Brockmann.png'/>
+  <p>fig.19 Posters of graphic designer Josef Müller–Brockmann</p>
+</div>
+
+<p>Many robots, both in reality and science-fiction are marked with a companies logo on its physical form. For example, the design of Hal (of 2001: A Space Odyssey) is branded on the top right corner of his panel with a simple futuristic logo. Which makes him appear as one of many other, similar products. Wall-E is also branded with a logo and making use of an extended typeface. So does the identity of the company Lunar Industries in the film Moon, the logo of JARVIS, a strong AI in the film Iron Man, the identity of the Terminator series and the logo on the robot in the film Robot & Frank. There are however some that do not have any hint of branding. The robotic duo from Star Wars are an exception. C-3PO is built by a single person and because of that, feels more unique in the films. R2-D2 however, is probably one of many different variations of similar robots. Yet those robots are not branded with a big corporative logo and in that sense, feels like they are not part of mass production, thus each being unique. If we attempt to personify robots –which asks for having its own unique identity– maybe we should consider designing them without a logo? A graphic designer has learned that designing a logo is the foundation for establishing an identity for a company or any other product. But maybe in this case, we need to question the purpose of a logo, or branding, when we want to personify robotics and AI. </p>
+
+<div class='thumb'>
+  <img src='img/17_WALLE.jpg'/>
+  <p>fig.20 The robot WALL-E in his home</p>
+</div>
+
+<p>An aspect of personification is how we can mimic facial expressions, the design of non-verbal communication. In my opinion, the design of Gerty can be very influential in personifying robotics and AI in reality. It is replicating facial expressions that avoid the Uncanny Valley. Gerty shows his face in kind, familiar, stylistic representations of our own human faces. He uses emoticons, a familiar way of communicating one’s feelings and expressions in society’s current generation. Applying emoticons greatly enhances interaction and communication with the machine, and we identify the machine closer to ourselves. It seems like that if we want to make robotics and AI more closer to us, we have to implement human elements such as: facial expressions, human-like sounds or small movements when talking. As Steve Jobs mentioned, we need to think of what we want from technology. Since we want them to be similar to us, we need to design robots with our behavior so we can recognize ourselves in these machines. Yet they are not made of the same biology, so aesthetically we can’t duplicate humans. If we do not evade the Uncanny Valley, designers need to find other solutions to mimic human aspects.</p>
+
+<div class='part'><h1>PART THREE</h1></div>
+
+<!----------------------- CONCLUSION ------------------------>
+<div class="chapter"><a id="seven" />Conclusion</div>
+<p>In the future, ‘the rise of the robots’ will become reality and today we can only picture it by watching films or reading sci-fi stories. These are influential in how we perceive the technology. However, it has also created the collective dread for robotics and AI. It is the superiority in both physical and intellect (robotics and AI) that frighten us, and makes us think it could threaten human existence. Robots are the engine for capitalism, creating profit for companies and they will continue to develop into better machines. There are drones fighting wars between nations, ‘simple’ robots assisting people in hospitals and working robots like Baxter for smaller factories. They are slowly evolving into more autonomous machines, moving out of factories and into our homes. Jibo is the first family robot that attempts to establish a positive relationship between man and machine. Robotics and AI are going to be part of our future society, and we will live side-by-side with mechanical beings. Since there are only a couple of ‘intelligent’ robots in use, the time has come to consider how we will implement these machines in our future society.</p>
+
+<p>In 2045, according to Ray Kurzweil, mankind will encounter a technological singularity, where inventions and AI-technology will improve with a speed we can not keep up with, the world will be completely different. New generations are already being raised with weak AI systems, and we can assume that by then, mankind might already be used to more intelligent systems. But it’s up to the designers and engineers to shape the world for the next generation with intelligent robots. </p>
+
+<p>Designers are facing a challenge in how to make robots fit in, balancing between success or failure.
+  The aesthetics of robotics and AI are still doubtful, recent designs are inspired by previously known as de-humanizing styles, but since society perceives these styles on daily basis through smartphones and applications, it humanized itself. We design like this because we want the robots to ‘look and feel’ as any human would do, so that we can easily interact with them. But they can not closely resemble a human, it will turn uncanny and increase societal anxiety, which means the current aesthetic of this technology is in a paradox. It will take many attempts to create a suiting design. In my opinion, the design of Jibo is a good attempt: he is a static agent just like my computer, only a bit more, personified. We could learn from Gerty or R2-D2 as well, the audience felt more comfortable with their friendly appearance and human-like aspects, such as facial expressions and human-like sounds. Unlike Hal-9000, who had no facial expression, and frightened most of the people. Mankind does not like full humanoid replicas, but we want to be able to recognize ourselves in small details.</p>
+
+<p>I’m uncertain whether if I think the developments are exciting to me, or if I’m afraid of it. There are many aspects of this research that makes me think that AI can be of great use in both private and public domain. Even though society envisions future dystopians, it is technology –invented through intelligence– that helped mankind towards the Digital Age. Our modern society is driven by improving technology, after old inventions have reached its limit, meaning that in the future, the development of robotics and AI is inevitable. Are we developing robotics and (strong) AI because the human is reaching its limits? It seems like we are recreating ourselves in a superior form, can it be the next step in human evolution? In my view, it remains a philosophical question: does mankind want to create intelligent machines that are better than man itself?</p>
+
+</div>
+
+</body>
+
+<footer>
+2015 - Thesis written and designed by <a href='http://www.sepusnoordmans.com' target='blank_'>Sepus Noordmans</a> at the Royal Academy of Art, the Hague
+</footer>
