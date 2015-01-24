@@ -22,7 +22,7 @@
 }
 
 .sidebar a{
-  font-family:'Nimbus Sans D OT';
+  font-family: NimbusSanExt-Reg;
   color:grey;
   text-decoration:none;
 
@@ -129,7 +129,7 @@ footer a:hover{
 }
 
 h1 {
-  font-family:'Nimbus Sans D OT';
+  font-family: NimbusSanExt-Reg;
   text-decoration:none;
   font-weight:normal;
   font-size:90px;
@@ -148,7 +148,7 @@ h1 {
 
 
 h2 {
-  font-family:'Nimbus Sans D OT';
+  font-family: NimbusSanExt-Reg;
   font-weight:normal;
   font-size:28px;
   text-align:left;
@@ -352,7 +352,7 @@ transition:all 0.1s ease;
 /*--------------------- CHAPTERS ---------------------*/
 
 .chapter a{
-  font-family:'Nimbus Sans D OT';
+  font-family: NimbusSanExt-Reg;
   text-transform:uppercase;
   position:relative;
   font-size:30px !important;
@@ -414,7 +414,7 @@ body#page1{
 
 
 .splash-title {
-  font-family:'Nimbus Sans D OT', sans-serif;
+  font-family: NimbusSanExt-Reg;
   color:black !important;
   font-size:24px !important;
   text-transform:none;
