@@ -386,7 +386,7 @@ body#page1{
 }
 .readon a{
   font-size:20px;
-  font-family:'Nimbus Sans D OT', sans-serif;
+  font-family: NimbusSanExt-Reg;
   text-transform:uppercase;
   text-decoration:none;
   color:black;
